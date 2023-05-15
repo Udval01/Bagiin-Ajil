@@ -1,21 +1,22 @@
-pipeline {
-    agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                docker build -t biy_daalt .
-            }
+pipeline {
+	agent none
+  stages {
+  	stage('Install node') {
+    	agent {
+      	docker {
+        	image 'node:16'
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+      }
+      steps {
+      	sh 'mvn clean install'
+      }
     }
+    stage('Docker Build') {
+    	agent any
+      steps {
+      	sh 'docker build -t shanem/spring-petclinic:latest .'
+      }
+    }
+  }
 }
