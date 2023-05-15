@@ -1,0 +1,20 @@
+{
+  "name": "biy_daalt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Udval01/Bagiin-Ajil.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Udval01/Bagiin-Ajil/issues"
+  },
+  "homepage": "https://github.com/Udval01/Bagiin-Ajil#readme"
+}
